@@ -1,0 +1,132 @@
+.work__title {
+  color: #4741d7;
+  font-size: 40px;
+}
+.work {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  margin: 10rem;
+}
+.work__image {
+  object-fit: contain;
+  filter: none;
+  height: 100%;
+}
+.work__paragraph {
+  line-height: 32px;
+  font-size: 2rem;
+}
+
+.work__section {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+.work__items {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  padding: 0 2rem;
+}
+.work__item {
+  color: #414166;
+  line-height: 32px;
+  font-size: 1.5rem;
+}
+
+.work__modality {
+  display: flex;
+  gap: 1rem;
+}
+
+.work__subtitle {
+  color: #4741d7;
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+
+.work--modality {
+  flex-direction: column;
+}
+
+.work__image--modality {
+  padding-top: 5rem;
+  max-height: 300px;
+}
+.work--future {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  text-align: center;
+}
+
+.image__company {
+  filter: none;
+  height: 20%;
+  max-height: 50px;
+  min-height: 60px;
+  min-width: 150px;
+  max-width: 150px;
+  object-fit: contain;
+}
+
+.work__buttons {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+  overflow: hidden;
+}
+
+.work__container {
+  border-radius: 6px;
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+  background-color: #ffffff;
+  height: 60px;
+  width: 200px;
+  padding: 2.5rem;
+}
+.work--future {
+  overflow: hidden;
+}
+
+/*  */
+
+.slider {
+    width: 75vw;
+    height: auto;
+    margin: auto;
+    overflow: hidden;
+}
+
+.slider .slide-track {
+    display: flex;
+    animation: scroll 40s linear infinite;
+    -webkit-animation: scroll 40s linear infinite;
+    width: calc(200px * 14);
+}
+
+.slider .slide {
+    width: 200px;
+}
+
+.slider .slide img {
+    width: 100%;
+}
+
+@keyframes scroll {
+    0% {
+        -webkit-transform: translateX(0);
+        transform: translateX(0);
+    }
+    100% {
+        -webkit-transform: translateX(calc(-200px * 7));
+        transform: translateX(calc(-200px * 7));
+    }
+}
+.slider {
+    margin-top: 3rem;
+}

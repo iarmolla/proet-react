@@ -1,0 +1,54 @@
+.testiomonials {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem 5rem;
+    margin: 0 5rem;
+    position: relative;
+}
+.testimonials__paragraph {
+    font-size: 1.5rem;
+}
+.testimonials__image {
+    background-image: url(https://www.cssscript.com/demo/responsive-testimonial-carousel/images/pattern-bg.svg);
+    background-size: cover;
+    object-fit: contain;
+    padding: 2rem;
+    width: 500px;
+    height: 50%;
+}
+
+.testimonials__article{
+    display: flex;
+    gap: 1rem;
+    flex-direction: column;
+}
+
+.testimonials__name {
+    color: #6c63ff;
+}
+
+.arrow__left,.arrow__right {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: .5rem;
+    border-radius: 100%;
+    position: absolute;
+    transition: 300ms ease-in;
+    cursor: pointer;
+}
+.arrow__left:hover,.arrow__right:hover {
+    background-color: #6b63ff81;
+}
+
+.arrow__left {
+    left: 0;
+}
+.arrow__right {
+    right: 0;
+}
+
+
+
+/* borrar */
