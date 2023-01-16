@@ -1,0 +1,24 @@
+.error {
+  min-height: 80vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+.error__image {
+  height: 50%;
+  width: 50%;
+}
+.error__title {
+  color: #6c63ff;
+  position: absolute;
+  z-index: 100;
+}
+
+@media (max-width: 992px) {
+  .error__image {
+    height: 50%;
+    width: 90%;
+  }
+}

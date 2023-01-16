@@ -7,7 +7,16 @@ nav {
     align-items: center;
     justify-content: space-between;
     color: #fff;
- 
+}
+.nav__title {
+    font-size: 1.5rem;
+    text-decoration: none;
+    outline: none;
+}
+
+.nav__title:visited,.nav__title:link,.nav__title:active {
+    text-decoration: none;
+    color: #fff;
 }
 .nav__section {
     display: flex;
@@ -22,4 +31,10 @@ nav {
     color: #fff;
     outline: none;
     text-decoration: none;
+}
+
+@media (max-width:768px) {
+    .wave {
+        top: -6%;
+    }   
 }

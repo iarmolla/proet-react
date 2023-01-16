@@ -1,0 +1,22 @@
+@media (max-width:768px) {
+    .container {
+        flex-direction: column;
+    }
+    .stats {
+        display: none;
+    }
+    .visa,.standar,.mastercard {
+        margin-top: 5rem;
+        position: relative;
+        top: 0;
+        left: 0;
+    }
+}
+@media (max-width:992px) {
+    .container {
+        margin: 0 2rem;
+    }
+    .visa,.standar,.mastercard {
+        left: 0;
+    }
+}

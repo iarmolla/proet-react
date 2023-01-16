@@ -122,3 +122,12 @@
     height: 220px;
   } 
 }
+
+@media (min-width:1200px) {
+  .landing__image {
+    height: 350px;
+  } 
+  .landing {
+    min-height: 90vh;
+  }
+}

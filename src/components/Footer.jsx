@@ -4,10 +4,10 @@ import '../styles/footer.css'
 function Footer() {
     return (
         <div>
-            <footer class="footer">
-                <h1 class="footer__logo">Proet</h1>
-                <div class="footer__addr">
-                    <div class="legal">
+            <footer className="footer">
+                <h1 className="footer__logo">Proet</h1>
+                <div className="footer__addr">
+                    <div className="legal">
                         <p>&copy; 2023 Derechos reservados</p>
                     </div>
                 </div>

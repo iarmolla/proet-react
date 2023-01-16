@@ -2,6 +2,9 @@ import React from 'react'
 import { Formik } from "formik";
 import { useState } from "react";
 import money from '../assets/money.svg'
+import '../styles/credit.css'
+import Footer from '../components/Footer'
+import Navbar from '../components/Navbar'
 
 function CreditCard() {
     const [type, setType] = useState();
@@ -50,6 +53,7 @@ function CreditCard() {
     }
   return (
     <main>      
+      <Navbar hide={'hide'}></Navbar>
         <section>
           <Formik
             initialValues={{
@@ -154,7 +158,7 @@ function CreditCard() {
                 <form>
                   <section className="form__section">
                     <article className="form__group">
-                      <label htmlFor="">CARDHOLDER NAME</label>
+                      <label>CARDHOLDER NAME</label>
                       <input type="text" placeholder="name" name="name" value={values.name} maxLength="12" onChange={handleChange}/>
                     </article>
                     <article className="form__group">
@@ -186,6 +190,8 @@ function CreditCard() {
             )}
           </Formik>
         </section>
+      <Footer></Footer>
+
       </main>
   )
 }

@@ -1,18 +1,27 @@
-import React from 'react'
+import React,{ useEffect } from 'react'
 import '../styles/navbar.css'
 import wave from '../assets/wave.svg'
+import { Link } from "react-router-dom";
 
-function Navbar() {
+
+function Navbar({hide}) {
+  useEffect(() => {
+    const element = document.getElementById('navbar')
+    element?.scrollIntoView()
+  }, [])
+  
   return (
-    <header>
+    <header id="navbar">
       <nav>
         <img src={wave} className="wave" alt="wave" />
-        <h1 className='nav__title'>Proet</h1>
+        <Link to="/" className='nav__title'>Proet</Link>
+        {hide === 'hide' ? <></>:<>
         <div className='nav__section'>
           <a href="#certificate" className='nav__link'>Certificados</a>
           <a href="#questions" className='nav__link'>Preguntas</a>
           <a href="#help" className='nav__link'>Ayuda</a>
         </div>
+        </>}
       </nav>
     </header>
   )

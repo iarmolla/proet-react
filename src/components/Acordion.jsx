@@ -9,7 +9,7 @@ function Acordion() {
     const [age, setAge] = useState(false)
     const [modality, setModality] = useState(false)
     return (
-        <section class="accordion">
+        <section className="accordion">
             <article className='acordion__section' >
             <h1 className='accordion__title'>Preguntas</h1>
                 <ul className='section__items'>

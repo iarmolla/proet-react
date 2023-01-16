@@ -17,8 +17,8 @@ function Work() {
                     <h1 className='work__title'>El futuro creado por Proet</h1>
                     <p className='work__item'>Estamos orgullosos de educar a las personas que trabajan en empresas y equipos que transforman a la industria.</p>
                 </section>              
-                <div class="slider">
-                    <div class="slide-track">
+                <div className="slider">
+                    <div className="slide-track">
                         <div className='slide'>
                             <img src={mercadolibre} alt="accenture" className='image__company' />
                         </div>                    
