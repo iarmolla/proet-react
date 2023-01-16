@@ -11,7 +11,7 @@ function Error() {
       <Navbar hide="hide"></Navbar>
 
       <div className='error'>
-      <Link to="/fullstack" className="ov-btn-slide-left ov-btn-slide-left--outline error__title">VOLVER</Link>
+      <Link to="/" className="ov-btn-slide-left ov-btn-slide-left--outline error__title">VOLVER</Link>
 
         <img className='error__image' src={error} alt="404"></img>
       </div>
