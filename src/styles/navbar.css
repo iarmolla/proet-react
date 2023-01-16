@@ -1,0 +1,25 @@
+nav {
+    background-color: #4641d705;
+    padding: 1.5rem;
+    display: flex;
+    flex-direction: row;
+    gap: .5rem;
+    align-items: center;
+    justify-content: space-between;
+    color: #fff;
+ 
+}
+.nav__section {
+    display: flex;
+    gap: .5rem;
+    align-items: center;
+    color: #fff;
+    justify-content: center;
+    font-weight: 700;
+}
+
+.nav__link{
+    color: #fff;
+    outline: none;
+    text-decoration: none;
+}

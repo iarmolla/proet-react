@@ -130,3 +130,10 @@
 .slider {
     margin-top: 3rem;
 }
+
+@media (max-width: 768px) {
+  .work{
+    margin: 10rem 2rem;
+  }
+
+}

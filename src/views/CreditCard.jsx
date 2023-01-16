@@ -1,7 +1,7 @@
 import React from 'react'
 import { Formik } from "formik";
 import { useState } from "react";
-import stats from './assets/stats.svg'
+import money from '../assets/money.svg'
 
 function CreditCard() {
     const [type, setType] = useState();
@@ -91,7 +91,7 @@ function CreditCard() {
               <article className="container">
                 <section className="credit-card">
                   <img
-                    src={stats}
+                    src={money}
                     className="stats"
                     alt="card"
                   />

@@ -4,7 +4,7 @@ import '../styles/pricing.css'
 function Pricing() {
     return (
         <div className='pricing'>
-            <section className='pricing__card'>
+            <section className='pricing__card' >
                 <article className='card__title'>
                     <h3 className='pricing__title'>Backend</h3>
                 </article>
