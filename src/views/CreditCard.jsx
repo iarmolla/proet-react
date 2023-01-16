@@ -58,6 +58,7 @@ function CreditCard() {
           <Formik
             initialValues={{
               name: "",
+              email: "",
               number: "",
               cvc: "",
               date: "",
@@ -160,6 +161,10 @@ function CreditCard() {
                     <article className="form__group">
                       <label>CARDHOLDER NAME</label>
                       <input type="text" placeholder="name" name="name" value={values.name} maxLength="12" onChange={handleChange}/>
+                    </article>
+                    <article className="form__group">
+                      <label>EMAIL</label>
+                      <input type="text" placeholder="email" name="email" value={values.email} maxLength="12" onChange={handleChange}/>
                     </article>
                     <article className="form__group">
                       <label htmlFor="">CARD NUMBER</label>

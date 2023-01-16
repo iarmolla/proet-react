@@ -3,6 +3,7 @@ import back from '../assets/back.svg'
 import { Link } from "react-router-dom";
 import Footer from '../components/Footer'
 import Navbar from '../components/Navbar'
+import Date from '../components/Date'
 
 function Backend() {
     return (
@@ -19,9 +20,8 @@ function Backend() {
                             <li className='work__item'>C#</li>
                             <li className='work__item'>CSS</li>
                         </ul>
-                        <Link to="/credit" className="ov-btn-slide-left ov-btn-slide-left--outline backend">COMPRAR</Link>
+                        <a href="#backend" className="ov-btn-slide-left ov-btn-slide-left--outline backend">COMPRAR</a>                       
                     </article>
-
                 </section>
                 <picture>
                     <img src={back} alt="work" className='work__image' />
@@ -45,6 +45,9 @@ function Backend() {
                     Desarrolla una aplicación Full Stack completa con Spring 5 y Angular + JPA + API Restful.
                     Al finalizar el curso, serás capaz de presentarte y aprobar el examen de certificación de Java Oracle
                 </p>
+            </section>
+            <section id="backend">
+                <Date></Date>
             </section>
             <Footer></Footer>
         </div>

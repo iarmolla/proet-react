@@ -6,7 +6,7 @@
   gap: 5rem;
 }
 .accordion__title {
-  font-size: 3rem;
+  font-size: 2rem;
   color: #4741d7;
 }
 
@@ -29,7 +29,7 @@
   flex-direction: column;
   justify-content: space-between;
   line-height: 44px;
-  font-size: 2rem;
+  font-size: 1.6rem;
   border-bottom: 1px solid #414166c9;
   padding-bottom: 1rem;
   max-width: 800px;
@@ -52,7 +52,7 @@
 }
 
 .accordion__paragraph {
-  font-size: 1.5rem;
+  font-size: 1.3rem;
   padding-bottom: 1rem;
 }
 

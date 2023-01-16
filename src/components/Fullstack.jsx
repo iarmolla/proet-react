@@ -3,6 +3,7 @@ import react from '../assets/react.svg'
 import { Link } from "react-router-dom";
 import Footer from '../components/Footer'
 import Navbar from '../components/Navbar'
+import Date from '../components/Date'
 
 function Fullstack() {
     return (
@@ -20,7 +21,7 @@ function Fullstack() {
                             <li className='work__item'>SQL.</li>
                             <li className='work__item'>Git.</li>
                         </ul>
-                        <Link to="/credit" className="ov-btn-slide-left ov-btn-slide-left--outline backend">COMPRAR</Link>
+                        <a href="#fullstack" className="ov-btn-slide-left ov-btn-slide-left--outline backend">COMPRAR</a>
                     </article>
                 </section>
                 <picture>
@@ -37,6 +38,9 @@ function Fullstack() {
                     Programar servidores de backend con NodeJs
                     Programar aplicaciones fronted con React
                 </p>
+            </section>
+            <section id="fullstack">
+                <Date></Date>
             </section>
             <Footer></Footer>
         </div>

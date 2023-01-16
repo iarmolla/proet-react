@@ -1,8 +1,9 @@
 import React from 'react'
 import react from '../assets/react.svg'
-import { Link } from "react-router-dom";
 import Footer from '../components/Footer'
 import Navbar from '../components/Navbar'
+import Date from '../components/Date'
+
 
 function Frontend() {
     return (
@@ -20,7 +21,7 @@ function Frontend() {
                             <li className='work__item'>React.</li>
                             <li className='work__item'>Git.</li>
                         </ul>
-                        <Link to="/credit" className="ov-btn-slide-left ov-btn-slide-left--outline backend">COMPRAR</Link>
+                        <a href="#frontend" className="ov-btn-slide-left ov-btn-slide-left--outline backend">COMPRAR</a>
                     </article>
                 </section>
                 <picture>
@@ -30,8 +31,11 @@ function Frontend() {
             <section className='frontend__section'>
                 <span className='frontend__title'>Sobre el curso</span>
                 <p className='frontend__item'>
-                En este curso aprenderás a desarrollar aplicaciones modernas con Javascript. Programarás en Javascript del lado del servidor aplicando técnicas asincrónicas. Aprenderás a trabajar con Bases de datos SQL y NoSQL dominando la gestión de los datos en forma eficiente, ágil y con una gran facilidad de escalabilidad. Al finalizar el curso serás capaz de diseñar complejas aplicaciones backend robustas, rápidas y escalables, dominando diferentes técnicas de comunicación, manejo de procesos distribuidos, control de grandes volúmenes de datos y despliegue a distintas plataformas web.
+                    En este curso aprenderás a desarrollar aplicaciones modernas con Javascript. Programarás en Javascript del lado del servidor aplicando técnicas asincrónicas. Aprenderás a trabajar con Bases de datos SQL y NoSQL dominando la gestión de los datos en forma eficiente, ágil y con una gran facilidad de escalabilidad. Al finalizar el curso serás capaz de diseñar complejas aplicaciones backend robustas, rápidas y escalables, dominando diferentes técnicas de comunicación, manejo de procesos distribuidos, control de grandes volúmenes de datos y despliegue a distintas plataformas web.
                 </p>
+            </section>
+            <section id="frontend">
+                <Date></Date>
             </section>
             <Footer></Footer>
         </div>

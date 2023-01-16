@@ -36,7 +36,7 @@ function Acordion() {
                         </div>
                         <div className={`accordion__paragraph ${certificate ? 'accordion__paragraph--active' : 'accordion__paragraph--disable'}`}>
                             <p className='accordion__paragraph--'>
-                                Sí. En Proet  apuntamos a un nuevo sistema educativo centrado en la práctica y en los resultados demostrables.
+                                Si.
                                 Una vez que hayas finalizado el Curso Introductorio y entregado los proyectos prácticos a desarrollar, recibirás un certificado que avala los conocimientos adquiridos.
                             </p>
                         </div>                       
@@ -45,12 +45,12 @@ function Acordion() {
                         setAge(!age)
                     })}>
                         <div className='acordion__items'>
-                            <li className='acordion__item'>¿Hay límite de edad? </li>
+                            <li className='acordion__item'>¿En que plataforma dan las clases? </li>
                             <MdOutlineKeyboardArrowRight className={`arrow__disable ${age ? 'arrow__disable--active' : ''}`} />
                         </div>
                         <div className={`accordion__paragraph ${age ? 'accordion__paragraph--active' : 'accordion__paragraph--disable'}`}>
                             <p className='accordion__paragraph--'>
-                                No hay limite de edad. 
+                                Todas las se dictan por google meet. En el dia de la clase recibiras un correo con la invitaciones a la meet. 
                             </p>
                         </div>                       
                     </div>
