@@ -67,24 +67,42 @@ function CreditCard() {
             type: "default",
           }}
           validate={(values) => {
-            let type = GetCardType(values.number)
-            setType(type)
-            const validateNumbers = "^[0-9]+$"
-            const errors = {};
+            const errors = {};            
+            let typeOfTarget = GetCardType(values.number)
+            setType(typeOfTarget)                 
+            const validateText = new RegExp('^[a-zA-ZñÑáéíóúÁÉÍÓÚ]+$');
+            const validateDate = new RegExp('([0-9]{2})/([0-9]{2})')
+            const validateEmail = new RegExp(/\S+@\S+\.\S+/)
+            const validateCode = new RegExp('^[0-9]*$')           
             if (!values.name) {
               errors.name = "Completar campo";
             }
-            if (!values.number) {
+            else if (!validateText.test(values.name)) {
+              errors.name = "El nombre debe ser un formato valido";
+            }
+            if(!values.number) {
               errors.number = "Completar campo";
             }
+            else if(typeOfTarget != 'Visa' && typeOfTarget != 'Mastercard') {   
+              errors.number = "Ingresar una tarjeta valida y sin espacios";
+            }          
             if (!values.email) {
               errors.email = "Completar campo";
+            }
+            else if(!validateEmail.test(values.email)) {
+              errors.email = "El email debe ser un formato valido";
             }
             if (!values.date) {
               errors.date = "Completar campo";
             }
+            else if(!validateDate.test(values.date)) {
+              errors.date = "La fecha debe ser MM/YY";
+            }
             if (!values.cvc) {
               errors.cvc = "Completar campo";
+            }
+            else if(!validateCode.test(values.cvc)) {
+              errors.cvc = "Debe contener solo numeros"
             }
             return errors;
           }}
@@ -99,7 +117,6 @@ function CreditCard() {
             handleChange,
             handleBlur,
             handleSubmit,
-            isSubmitting,
           }) => (
             <article className="container">
               <section className="credit-card">
@@ -168,38 +185,38 @@ function CreditCard() {
                 <section className="form__section">
                   <article className="form__group">
                     <label>CARDHOLDER NAME</label>
-                    <input type="text" placeholder="name" name="name" value={values.name} maxLength="12" onChange={handleChange} />
+                    <input type="text" placeholder="name" name="name" value={values.name} maxLength="12" onChange={handleChange}  onBlur={handleBlur} />
                   </article>
                   <div>
-                    <label className='form__error'>{errors.name}</label>
+                    <label className='form__error'>{touched.name && errors.name}</label>
                   </div>
                   <article className="form__group">
                     <label>EMAIL</label>
-                    <input type="text" placeholder="email" name="email" value={values.email} maxLength="12" onChange={handleChange} />
+                    <input type="text" placeholder="email" name="email" value={values.email} maxLength="26" onChange={handleChange}  onBlur={handleBlur} />
                   </article>
                   <div>
-                    <label className='form__error'>{errors.email}</label>
+                    <label className='form__error'>{touched.email && errors.email}</label>
                   </div>
                   <article className="form__group">
                     <label htmlFor="">CARD NUMBER</label>
-                    <input type="text" placeholder="number" name="number" maxLength={16} value={values.number} onChange={handleChange} />
+                    <input type="text" placeholder="number" name="number" maxLength={16} value={values.number} onChange={handleChange}  onBlur={handleBlur} />
                   </article>
                   <div>
-                    <label className='form__error'>{errors.number}</label>
+                    <label className='form__error'>{touched.number && errors.number}</label>
                   </div>
                   <article className="form__group">
                     <div className="form__group">
                       <label htmlFor="">DATE</label>
-                      <input type="text" placeholder="date" name="date" maxLength={5} value={values.date} onChange={handleChange} />
+                      <input type="text" placeholder="date" name="date" maxLength={5} value={values.date} onChange={handleChange}  onBlur={handleBlur}/>
                     </div>
                   </article>
                   <div>
-                    <label className='form__error'>{errors.date}</label>
+                    <label className='form__error'>{touched.date && errors.date}</label>
                   </div>
                   <article className="form__group">
                     <div className="form__group">
                       <label htmlFor="">CVC</label>
-                      <input type="text" placeholder="cvc" name="cvc" maxLength={4} value={values.cvc} onChange={handleChange} onClick={() => {
+                      <input type="text" placeholder="cvc" name="cvc" maxLength={4} value={values.cvc} onBlurCapture={handleBlur}  onChange={handleChange} onClick={() => {
                         setFocus(true)
                       }} onBlur={() => {
                         setFocus(false)
@@ -209,7 +226,7 @@ function CreditCard() {
                     </div>
                   </article>
                   <div>
-                    <label className='form__error'>{errors.cvc}</label>
+                    <label className='form__error'>{touched.cvc && errors.cvc}</label>
                   </div>
                   <article>
                     <button className='form__submit'>Confirm</button>
