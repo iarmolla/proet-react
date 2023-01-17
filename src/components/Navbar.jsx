@@ -19,7 +19,7 @@ function Navbar({hide}) {
         <div className='nav__section'>
           <a href="#certificate" className='nav__link'>Certificados</a>
           <a href="#questions" className='nav__link'>Preguntas</a>
-          <a href="#help" className='nav__link'>Ayuda</a>
+          <a href="#testimonials" className='nav__link'>Testimonios</a>
         </div>
         </>}
       </nav>

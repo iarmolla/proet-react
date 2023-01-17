@@ -66,7 +66,7 @@ function CreditCard() {
             date: "",
             type: "default",
           }}
-          validate={(values) => {
+          validate={(values) => {             
             const errors = {};            
             let typeOfTarget = GetCardType(values.number)
             setType(typeOfTarget)                 

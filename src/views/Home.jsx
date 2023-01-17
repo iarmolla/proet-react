@@ -33,7 +33,7 @@ function Home() {
                 <Certificate></Certificate>
             </div>
             <div>
-                <h1 className='work__testimonials'>Testimonios</h1>
+                <h1 className='work__testimonials' id="testimonials">Testimonios</h1>
                 <Testimonials></Testimonials>
             </div>
             <div id="questions">
