@@ -8,6 +8,7 @@ import Backend from "./components/Backend";
 import Frontend from "./components/Frontend";
 import Fullstack from "./components/Fullstack";
 import Error from "./components/Error";
+import Subscription from "./components/Subscription";
 
 function App() {
   return (
@@ -21,6 +22,7 @@ function App() {
           <Route path="/backend" element={<Backend />}></Route>
           <Route path="/fullstack" element={<Fullstack />}></Route>
           <Route path="/credit" element={<CreditCard />}></Route>
+          <Route path="/subscription" element={<Subscription/>}></Route>
           <Route path="*" element={<Error/>}></Route>
         </Routes>
       </BrowserRouter>

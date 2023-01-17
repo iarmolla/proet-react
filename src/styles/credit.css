@@ -14,9 +14,15 @@
 }
 @media (max-width:992px) {
     .container {
-        margin: 0 2rem;
+        margin: 10px 2rem;
     }
     .visa,.standar,.mastercard {
         left: 0;
+    }
+}
+
+@media (min-width:1200px) {
+    .container {
+        margin: 1rem 2rem;
     }
 }
