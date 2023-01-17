@@ -4,8 +4,8 @@ import certificate from '../assets/certificate.svg'
 
 function Certificate() {
     return (
-        <section className='certificate'>
-            <article className='certificate__section'>
+        <section className='certificate' >
+            <article className='certificate__section' data-aos="fade-right" data-aos-duration="1000">
                 <h1 className='certificate__title'>Cursos certificados</h1>
                 <h2 className='certificate__subtitle'>Nuestros cursos están <span className='subtitle__certificate'>certificados</span> por las empresas digitales líderes de Latinoamérica.</h2>
                 <p className='certificate__paragraph'>

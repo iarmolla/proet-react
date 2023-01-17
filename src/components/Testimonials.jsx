@@ -6,7 +6,7 @@ import face from '../assets/face.jpg'
 function Testimonials() {
     const [active, setActive] = useState(false)
     return (
-        <div className='testiomonials'>
+        <div className='testiomonials' >
             <div className={`${!active ? 'active' : 'disable'}`}>
                 <div className='arrow__left' onClick={() => { setActive(true) }} >
                     <AiOutlineArrowLeft></AiOutlineArrowLeft>

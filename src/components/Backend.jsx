@@ -1,15 +1,17 @@
 import React from 'react'
 import back from '../assets/back.svg'
-import { Link } from "react-router-dom";
 import Footer from '../components/Footer'
 import Navbar from '../components/Navbar'
 import Date from '../components/Date'
+import AOS from 'aos';
+import 'aos/dist/aos.css'; 
+AOS.init();
 
 function Backend() {
     return (
         <div>
             <Navbar hide='hide'></Navbar>
-            <div className='work work__backend'>
+            <div className='work work__backend' data-aos="fade-right" data-aos-duration="1000">
                 <section className='work__section'>
                     <h1 className='work__title'>Backend developer</h1>
                     <p className='work__paragraph'>En este curso aprenderas las tecnologias mas demandas del mercado.</p>
@@ -27,7 +29,7 @@ function Backend() {
                     <img src={back} alt="work" className='work__image' />
                 </picture>
             </div>
-            <section className='frontend__section'>
+            <section className='frontend__section' data-aos="fade-right" data-aos-duration="1000">
                 <span className='frontend__title'>Sobre el curso</span>
                 <p className='frontend__item'>
                     Aprende a programar desde cero con Java hasta avanzado utilizando el mejor IDE IntelliJ IDEA (versión community o free)
@@ -46,7 +48,7 @@ function Backend() {
                     Al finalizar el curso, serás capaz de presentarte y aprobar el examen de certificación de Java Oracle
                 </p>
             </section>
-            <section id="backend">
+            <section id="backend" data-aos="fade-right" data-aos-duration="1000">
                 <Date></Date>
             </section>
             <Footer></Footer>

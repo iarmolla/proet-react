@@ -11,7 +11,7 @@ import provincia from '../assets/provincia.svg'
 
 function Work() {
     return (
-        <>
+        <div>
             <div className='work work--future'>
                 <section className='work__section work__section--modality'>
                     <h1 className='work__title'>El futuro creado por Proet</h1>
@@ -59,7 +59,7 @@ function Work() {
                     </div>
                 </div>
             </div>
-            <div className='work work--modality'>
+            <div className='work work--modality' data-aos="fade-right" data-aos-duration="1000">
                 <section className='work__section work__section--modality'>
                     <h1 className='work__title'>Modalidades de estudio</h1>
                     <p className='work__paragraph'>Plan de estudios diseñadado para tener una carrera exitosa en tech.</p>
@@ -78,7 +78,7 @@ function Work() {
                     <img src={modality} alt="work" className='work__image work__image--modality' />
                 </picture>
             </div>
-            <div className='work'>
+            <div className='work' data-aos="fade-right" data-aos-duration="1000">
                 <section className='work__section'>
                     <h1 className='work__title'>Carrer Advisor</h1>
                     <p className='work__paragraph'>Ingresa al mundo laboral acompañado por nuestros asesores de carrera, quienes te asistirán en tu camino profesional.</p>
@@ -94,7 +94,7 @@ function Work() {
                     <img src={work} alt="work" className='work__image' />
                 </picture>
             </div>
-        </>
+        </div>
     )
 }
 

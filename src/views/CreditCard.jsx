@@ -6,6 +6,9 @@ import '../styles/credit.css'
 import Footer from '../components/Footer'
 import Navbar from '../components/Navbar'
 import { useNavigate } from 'react-router-dom';
+import AOS from 'aos';
+import 'aos/dist/aos.css'; 
+AOS.init();
 
 function CreditCard() {
   const [type, setType] = useState();
@@ -56,7 +59,7 @@ function CreditCard() {
   return (
     <main>
       <Navbar hide={'hide'}></Navbar>
-      <section>
+      <section data-aos="fade-right" data-aos-duration="1000">
         <Formik
           initialValues={{
             name: "",

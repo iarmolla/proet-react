@@ -7,6 +7,9 @@ import curso from '../assets/curso.svg'
 import wave from '../assets/wave.svg'
 import Certificate from '../components/Certificate'
 import Acordion from '../components/Acordion'
+import AOS from 'aos';
+import 'aos/dist/aos.css'; 
+AOS.init();
 
 function Home() {
     return (
@@ -22,21 +25,21 @@ function Home() {
                     <img src={curso} className="landing__image" alt="curso" />
                 </section>
             </div>
-            <div className='landing__pricing' id="course">
-                <h1 className='work__title'>DEVELOPER</h1>
+            <div className='landing__pricing' id="course" data-aos="fade-right" data-aos-duration="1000">
+                <h1 className='work__title' >DEVELOPER</h1>
                 <Pricing></Pricing>
             </div>
-            <div>
+            <div data-aos="fade-right" data-aos-duration="1000">
                 <Work></Work>
             </div>
             <div id="certificate">
                 <Certificate></Certificate>
             </div>
-            <div>
+            <div data-aos="fade-up" data-aos-duration="1000">
                 <h1 className='work__testimonials' id="testimonials">Testimonios</h1>
                 <Testimonials></Testimonials>
             </div>
-            <div id="questions">
+            <div id="questions" data-aos="fade-right" data-aos-duration="1000">
                 <Acordion></Acordion>
             </div>
         </>
