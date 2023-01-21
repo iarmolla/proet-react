@@ -351,6 +351,15 @@ img {
   color: #cf2323;
 }
 
+.form__error--email,.form__success {
+  text-align: center;
+  margin-top: 1rem;
+}
+.form__success,.form__error--sucess {
+  font-size: 1rem;
+  color: #6c63ff;
+}
 .form__section {
   gap: 0.5rem;
 }
+

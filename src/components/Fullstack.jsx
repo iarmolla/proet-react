@@ -4,7 +4,7 @@ import Footer from '../components/Footer'
 import Navbar from '../components/Navbar'
 import Date from '../components/Date'
 import AOS from 'aos';
-import 'aos/dist/aos.css'; 
+import 'aos/dist/aos.css';
 AOS.init();
 
 function Fullstack() {
@@ -17,11 +17,11 @@ function Fullstack() {
                     <p className='work__paragraph'>En este curso aprenderas las tecnologias mas demandas del mercado.</p>
                     <article>
                         <ul className='work__items work__items--backend'>
-                            <li className='work__item'>React</li>
-                            <li className='work__item'>Node</li>
-                            <li className='work__item'>Javascript.</li>
+                            <li className='work__item'>REACT.</li>
+                            <li className='work__item'>NODE.</li>
+                            <li className='work__item'>JAVASCRIPT.</li>
                             <li className='work__item'>SQL.</li>
-                            <li className='work__item'>Git.</li>
+                            <li className='work__item'>GIT.</li>
                         </ul>
                         <a href="#fullstack" className="ov-btn-slide-left ov-btn-slide-left--outline backend">COMPRAR</a>
                     </article>
@@ -29,7 +29,7 @@ function Fullstack() {
                 <picture>
                     <img src={react} alt="work" className='work__image' />
                 </picture>
-            </div>
+            </div>           
             <section className='frontend__section' data-aos="fade-right" data-aos-duration="1000">
                 <span className='frontend__title'>Sobre el curso</span>
                 <p className='frontend__item'>
@@ -42,7 +42,7 @@ function Fullstack() {
                 </p>
             </section>
             <section id="fullstack" data-aos="fade-right" data-aos-duration="1000">
-                <Date></Date>
+                <Date course='fullstack'></Date>
             </section>
             <Footer></Footer>
         </div>

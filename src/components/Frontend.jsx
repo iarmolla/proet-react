@@ -17,11 +17,11 @@ function Frontend() {
                     <p className='work__paragraph'>En este curso aprenderas las tecnologias mas demandas del mercado.</p>
                     <article>
                         <ul className='work__items work__items--backend'>
-                            <li className='work__item'>Html</li>
-                            <li className='work__item'>Css</li>
-                            <li className='work__item'>Javascript.</li>
-                            <li className='work__item'>React.</li>
-                            <li className='work__item'>Git.</li>
+                            <li className='work__item'>HTML</li>
+                            <li className='work__item'>CSS</li>
+                            <li className='work__item'>JAVASCRIPT.</li>
+                            <li className='work__item'>REACT.</li>
+                            <li className='work__item'>GIT.</li>
                         </ul>
                         <a href="#frontend" className="ov-btn-slide-left ov-btn-slide-left--outline backend">COMPRAR</a>
                     </article>
@@ -37,7 +37,7 @@ function Frontend() {
                 </p>
             </section>
             <section id="frontend"  data-aos="fade-right" data-aos-duration="1000">
-                <Date></Date>
+                <Date course='frontend'></Date>
             </section>
             <Footer></Footer>
         </div>

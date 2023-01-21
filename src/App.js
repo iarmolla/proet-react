@@ -21,7 +21,7 @@ function App() {
           <Route path="/frontend" element={<Frontend/>}></Route>
           <Route path="/backend" element={<Backend />}></Route>
           <Route path="/fullstack" element={<Fullstack />}></Route>
-          <Route path="/credit" element={<CreditCard />}></Route>
+          <Route path="/credit/:type/:date/:hours" element={<CreditCard />}></Route>
           <Route path="/subscription" element={<Subscription/>}></Route>
           <Route path="*" element={<Error/>}></Route>
         </Routes>

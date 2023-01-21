@@ -1,17 +1,21 @@
 import React from 'react'
 import { Formik } from "formik";
-import { useState } from "react";
+import { useState, useRef } from "react";
 import money from '../assets/money.svg'
 import '../styles/credit.css'
 import Footer from '../components/Footer'
 import Navbar from '../components/Navbar'
-import { useNavigate } from 'react-router-dom';
+import { useNavigate, useParams } from 'react-router-dom';
 import AOS from 'aos';
-import 'aos/dist/aos.css'; 
+import 'aos/dist/aos.css';
+import emailjs from '@emailjs/browser';
+import validate from '../services/emailValidation'
 AOS.init();
 
 function CreditCard() {
+  const params = useParams()
   const [type, setType] = useState();
+  const [fail, setFail] = useState('')
   const navigate = useNavigate()
   const [focus, setFocus] = useState(false)
   const GetCardType = (number) => {
@@ -56,6 +60,7 @@ function CreditCard() {
 
     return "";
   }
+  const form = useRef();
   return (
     <main>
       <Navbar hide={'hide'}></Navbar>
@@ -69,10 +74,10 @@ function CreditCard() {
             date: "",
             type: "default",
           }}
-          validate={(values) => {             
-            const errors = {};            
+          validate={(values) => {
+            const errors = {};
             let typeOfTarget = GetCardType(values.number)
-            setType(typeOfTarget)                 
+            setType(typeOfTarget)            
             const validateText = new RegExp('^[a-zA-ZñÑáéíóúÁÉÍÓÚ]+$');
             const validateDate = new RegExp('([0-9]{2})/([0-9]{2})')
             const validateEmail = new RegExp(/\S+@\S+\.\S+/)
@@ -83,34 +88,48 @@ function CreditCard() {
             else if (!validateText.test(values.name)) {
               errors.name = "El nombre debe ser un formato valido";
             }
-            if(!values.number) {
+            if (!values.number) {
               errors.number = "Completar campo";
-            }
-            else if(typeOfTarget != 'Visa' && typeOfTarget != 'Mastercard') {   
+            }                   
+            else if (typeOfTarget != 'Visa' && typeOfTarget != 'Mastercard' && typeOfTarget != 'AMEX' &&  typeOfTarget != 'JCB' &&  typeOfTarget != 'Discover') {
               errors.number = "Ingresar una tarjeta valida y sin espacios";
-            }          
+            }
             if (!values.email) {
               errors.email = "Completar campo";
             }
-            else if(!validateEmail.test(values.email)) {
+            else if (!validateEmail.test(values.email)) {
               errors.email = "El email debe ser un formato valido";
+
             }
             if (!values.date) {
               errors.date = "Completar campo";
             }
-            else if(!validateDate.test(values.date)) {
+            else if (!validateDate.test(values.date)) {
               errors.date = "La fecha debe ser MM/YY";
             }
             if (!values.cvc) {
               errors.cvc = "Completar campo";
             }
-            else if(!validateCode.test(values.cvc)) {
+            else if (!validateCode.test(values.cvc)) {
               errors.cvc = "Debe contener solo numeros"
             }
             return errors;
           }}
-          onSubmit={() => {
-            navigate('/subscription')
+          onSubmit={(values) => {
+            validate(values.email).then((res) => {
+              if (res === 'DELIVERABLE') {
+                emailjs.sendForm('service_b89kagj', 'template_9h53ogr', form.current, 'TRRFB1mFJQx0bDmUP')
+                setFail('DELIVERABLE')
+                setTimeout(() => {
+                  navigate('/subscription')
+                }, 1000)
+              }
+              else if (res === 'UNDELIVERABLE') {
+                setFail('UNDELIVERABLE')
+              }
+            }).catch(() => {
+              setFail('error')
+            })
           }}
         >
           {({
@@ -184,33 +203,33 @@ function CreditCard() {
                   </div>
                 </div>
               </section>
-              <form onSubmit={handleSubmit}>
+              <form onSubmit={handleSubmit} ref={form} >
                 <section className="form__section">
                   <article className="form__group">
-                    <label>CARDHOLDER NAME</label>
-                    <input type="text" placeholder="name" name="name" value={values.name} maxLength="12" onChange={handleChange}  onBlur={handleBlur} />
+                    <label className='form__label'>CARDHOLDER NAME</label>
+                    <input type="text" placeholder="name" name="name" value={values.name} maxLength="12" onChange={handleChange} onBlur={handleBlur} />
                   </article>
                   <div>
                     <label className='form__error'>{touched.name && errors.name}</label>
                   </div>
                   <article className="form__group">
-                    <label>EMAIL</label>
-                    <input type="text" placeholder="email" name="email" value={values.email} maxLength="26" onChange={handleChange}  onBlur={handleBlur} />
+                    <label className='form__label'>EMAIL</label>
+                    <input type="text" placeholder="email" name="email" value={values.email} maxLength="26" onChange={handleChange} onBlur={handleBlur} />
                   </article>
                   <div>
                     <label className='form__error'>{touched.email && errors.email}</label>
                   </div>
                   <article className="form__group">
-                    <label htmlFor="">CARD NUMBER</label>
-                    <input type="text" placeholder="number" name="number" maxLength={16} value={values.number} onChange={handleChange}  onBlur={handleBlur} />
+                    <label htmlFor="" className='form__label'>CARD NUMBER</label>
+                    <input type="text" placeholder="number" name="number" maxLength={16} value={values.number} onChange={handleChange} onBlur={handleBlur} />
                   </article>
                   <div>
                     <label className='form__error'>{touched.number && errors.number}</label>
                   </div>
                   <article className="form__group">
                     <div className="form__group">
-                      <label htmlFor="">DATE</label>
-                      <input type="text" placeholder="date" name="date" maxLength={5} value={values.date} onChange={handleChange}  onBlur={handleBlur}/>
+                      <label htmlFor="" className='form__label'>DATE</label>
+                      <input type="text" placeholder="date" name="date" maxLength={5} value={values.date} onChange={handleChange} onBlur={handleBlur} />
                     </div>
                   </article>
                   <div>
@@ -218,8 +237,11 @@ function CreditCard() {
                   </div>
                   <article className="form__group">
                     <div className="form__group">
+                      <input type="text" style={{ display: 'none' }} value={params.type} name={'type'} />
+                      <input type="text" style={{ display: 'none' }} value={params.hours} name={'hours'} />
+                      <input type="text" style={{ display: 'none' }} value={params.date} name={'day'} />
                       <label htmlFor="">CVC</label>
-                      <input type="text" placeholder="cvc" name="cvc" maxLength={4} value={values.cvc} onBlurCapture={handleBlur}  onChange={handleChange} onClick={() => {
+                      <input type="text" placeholder="cvc" name="cvc" maxLength={4} value={values.cvc} onBlurCapture={handleBlur} onChange={handleChange} onClick={() => {
                         setFocus(true)
                       }} onBlur={() => {
                         setFocus(false)
@@ -231,10 +253,19 @@ function CreditCard() {
                   <div>
                     <label className='form__error'>{touched.cvc && errors.cvc}</label>
                   </div>
-                  <article>
-                    <button className='form__submit'>Confirm</button>
+                  <article>                    
+                    <button className="ov-btn-slide-left ov-btn-slide-left--outline btn--confirm">Confirmar</button>
                   </article>
                 </section>
+                {fail == 'DELIVERABLE' ?
+                  <div className='form__success'>
+                    <label className='form__error form__error--sucess'>Inscripción exitosa!</label>
+                  </div> : fail == 'UNDELIVERABLE' ?
+                    <div className='form__error--email'>
+                      <label className='form__error'>El email es invalido</label>
+                    </div> : fail == 'error' ? <div className='form__error--email'>
+                      <label className='form__error'>El email es invalido</label>
+                    </div> : ''}
               </form>
             </article>
           )}
@@ -242,7 +273,7 @@ function CreditCard() {
       </section>
       <Footer></Footer>
 
-    </main>
+    </main >
   )
 }
 

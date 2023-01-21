@@ -23,7 +23,7 @@ function Acordion() {
                         <div className={`accordion__paragraph ${mp ? 'accordion__paragraph--active' : 'accordion__paragraph--disable'}`}>
                             <p className='accordion__paragraph--'>
                                 Podés pagar
-                                con tarjeta de crédito o débito a través de Mercado Pago, con dinero en cuenta de Mercado Pago o hacer una transferencia bancaria.
+                                con tarjeta de crédito / débito o hacer una transferencia bancaria.
                             </p>
                         </div>
                     </div>

@@ -17,8 +17,8 @@ function Backend() {
                     <p className='work__paragraph'>En este curso aprenderas las tecnologias mas demandas del mercado.</p>
                     <article>
                         <ul className='work__items work__items--backend'>
-                            <li className='work__item'>Java.</li>
-                            <li className='work__item'>Javascript.</li>
+                            <li className='work__item'>JAVA.</li>
+                            <li className='work__item'>JAVASCRIPT.</li>
                             <li className='work__item'>C#</li>
                             <li className='work__item'>CSS</li>
                         </ul>
@@ -49,7 +49,7 @@ function Backend() {
                 </p>
             </section>
             <section id="backend" data-aos="fade-right" data-aos-duration="1000">
-                <Date></Date>
+                <Date course='backend'></Date>
             </section>
             <Footer></Footer>
         </div>
