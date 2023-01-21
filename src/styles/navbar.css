@@ -33,8 +33,15 @@ nav {
     text-decoration: none;
 }
 
+@media (max-width:390px) {
+    nav  {
+        font-size: .8rem;
+    }
+}
+
 @media (max-width:768px) {
     .wave {
         top: -6%;
     }   
 }
+
