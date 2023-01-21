@@ -102,7 +102,7 @@
     display: none;
   }
   .landing__section {
-    padding-left: 2rem;
+    width: 90%;
   }
   .landing__pricing {
     padding-top: 0;
