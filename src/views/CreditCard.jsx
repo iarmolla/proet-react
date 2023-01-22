@@ -78,10 +78,10 @@ function CreditCard() {
             const errors = {};
             let typeOfTarget = GetCardType(values.number)
             setType(typeOfTarget)            
-            const validateText = new RegExp("[a-zA-Z ]{2,254}");
+            const validateText = new RegExp("^[ a-zA-ZñÑáéíóúÁÉÍÓÚ]+$");
             const validateDate = new RegExp('([0-9]{2})/([0-9]{2})')
             const validateEmail = new RegExp(/\S+@\S+\.\S+/)
-            const validateCode = new RegExp('^[0-9]*$')           
+            const validateCode = new RegExp('^[0-9]*$')                   
             if (!values.name) {
               errors.name = "Completar campo";
             }
@@ -207,7 +207,7 @@ function CreditCard() {
                 <section className="form__section">
                   <article className="form__group">
                     <label className='form__label'>CARDHOLDER NAME</label>
-                    <input type="text" placeholder="name" name="name" value={values.name} maxLength="24" onChange={handleChange} onBlur={handleBlur} />
+                    <input type="text" placeholder="name" name="name" value={values.name} maxLength="21" onChange={handleChange} onBlur={handleBlur} />
                   </article>
                   <div>
                     <label className='form__error'>{touched.name && errors.name}</label>
