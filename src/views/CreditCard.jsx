@@ -78,7 +78,7 @@ function CreditCard() {
             const errors = {};
             let typeOfTarget = GetCardType(values.number)
             setType(typeOfTarget)            
-            const validateText = new RegExp('^[a-zA-ZñÑáéíóúÁÉÍÓÚ]+$');
+            const validateText = new RegExp("[a-zA-Z ]{2,254}");
             const validateDate = new RegExp('([0-9]{2})/([0-9]{2})')
             const validateEmail = new RegExp(/\S+@\S+\.\S+/)
             const validateCode = new RegExp('^[0-9]*$')           
