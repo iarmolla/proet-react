@@ -207,7 +207,7 @@ function CreditCard() {
                 <section className="form__section">
                   <article className="form__group">
                     <label className='form__label'>CARDHOLDER NAME</label>
-                    <input type="text" placeholder="name" name="name" value={values.name} maxLength="12" onChange={handleChange} onBlur={handleBlur} />
+                    <input type="text" placeholder="name" name="name" value={values.name} maxLength="24" onChange={handleChange} onBlur={handleBlur} />
                   </article>
                   <div>
                     <label className='form__error'>{touched.name && errors.name}</label>
