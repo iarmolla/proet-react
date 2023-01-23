@@ -1,3 +1,34 @@
+# Proet 
+Proet 🖥️ es una web, que tiene como fin, preparar a los alumnos a través de los cursos que proporciona.
+Sus cursos son:
+-Fullstack
+-Backend
+-Frontend
+
+## Características
+- Sección certificados
+- Sección preguntas
+- Sección testimonios
+- Descripcion del curso
+- Fechas de inscripción
+- Compra con tarjeta de credito
+- Notificar compra a través del correo
+
+Proet cursos, tiene como objetivo preparar en todo el mundo futuros desarrolladores
+
+## Tecnologías
+Proet esta construido con:
+
+- [React](https://es.reactjs.org/)
+- [Formik](https://formik.org/)
+- [abstract](https://www.abstractapi.com/api/email-verification-validation-api)
+- [axios](https://axios-http.com/docs/intro)
+- [react-icons](https://react-icons.github.io/react-icons/)
+- [react-router-dom](https://reactrouter.com/en/main)
+- [aos](https://michalsnik.github.io/aos/)
+
+
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
