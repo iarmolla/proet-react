@@ -1,6 +1,8 @@
 # Proet 
 Proet 🖥️ es una web, que tiene como fin, preparar a los alumnos a través de los cursos que proporciona.
-Sus cursos son:
+
+
+## Cursos
 -Fullstack
 -Backend
 -Frontend
