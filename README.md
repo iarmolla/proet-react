@@ -10,10 +10,10 @@ La modalidad es a distancia, con cursos certificados oficialmente, clases en viv
 - Frontend
 
 ## Características
-- Sección certificados
+- Cursos certificados
 - Sección preguntas
 - Sección testimonios
-- Descripcion del curso
+- Descripción del curso
 - Fechas de inscripción
 - Compra con tarjeta de credito
 - Notificar compra a través del correo
