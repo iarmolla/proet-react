@@ -1,6 +1,7 @@
 # Proet 
-Proet 🖥️ es una web, que tiene como fin, preparar a los alumnos a través de los cursos que proporciona.
 
+Proet 🖥️ es una web, que tiene como fin, preparar a los alumnos a través de los cursos que proporciona, con profesores 100% capacitados. 
+La modalidad es a distancia, con cursos certificados oficialmente, clases en vivo, con posiblidad de ver la grabación de la clase y como característica ofrece pagos con tarjeta de credito o debito.
 
 ## Cursos
 
