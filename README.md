@@ -4,9 +4,9 @@ Proet 🖥️ es una web, que tiene como fin, preparar a los alumnos a través d
 
 ## Cursos
 
-- [Fullstack]()
-- [Backend]()
-- [Frontend]()
+- Fullstack
+- Backend
+- Frontend
 
 ## Características
 - Sección certificados
