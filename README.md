@@ -32,7 +32,8 @@ Proet esta construido con:
 - [aos](https://michalsnik.github.io/aos/)
 
 ## Instalación 
-
-Para instalar las dependencias cambiar api key en services y usar:
+Cambiar api key en services.
+Para instalar las dependencias:
 
 - npm install
+- Generar api key en [abstract-api](https://www.abstractapi.com/)
