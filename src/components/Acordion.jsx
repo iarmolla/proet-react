@@ -11,7 +11,7 @@ function Acordion() {
     return (
         <section className="accordion">
             <article className='acordion__section' >
-            <h1 className='accordion__title'>Preguntas</h1>
+                <h1 className='accordion__title'>Preguntas</h1>
                 <ul className='section__items'>
                     <div className='acordion__container' onClick={(() => {
                         setMp(!mp)
@@ -27,10 +27,10 @@ function Acordion() {
                             </p>
                         </div>
                     </div>
-                    <div className='acordion__container' onClick={(() => {
-                        setCertificate(!certificate)
-                    })}>
-                        <div className='acordion__items'>
+                    <div className='acordion__container'>
+                        <div className='acordion__items' onClick={(() => {
+                            setCertificate(!certificate)
+                        })}>
                             <li className='acordion__item'>¿Entregan una certificación al finalizar el curso? </li>
                             <MdOutlineKeyboardArrowRight className={`arrow__disable ${certificate ? 'arrow__disable--active' : ''}`} />
                         </div>
@@ -39,25 +39,25 @@ function Acordion() {
                                 Si.
                                 Una vez que hayas finalizado el Curso Introductorio y entregado los proyectos prácticos a desarrollar, recibirás un certificado que avala los conocimientos adquiridos.
                             </p>
-                        </div>                       
+                        </div>
                     </div>
-                    <div className='acordion__container' onClick={(() => {
-                        setAge(!age)
-                    })}>
-                        <div className='acordion__items'>
+                    <div className='acordion__container'>
+                        <div className='acordion__items' onClick={(() => {
+                            setAge(!age)
+                        })}>
                             <li className='acordion__item'>¿En que plataforma dan las clases? </li>
                             <MdOutlineKeyboardArrowRight className={`arrow__disable ${age ? 'arrow__disable--active' : ''}`} />
                         </div>
                         <div className={`accordion__paragraph ${age ? 'accordion__paragraph--active' : 'accordion__paragraph--disable'}`}>
                             <p className='accordion__paragraph--'>
-                                Todas las se dictan por google meet. En el dia de la clase recibiras un correo con la invitaciones a la meet. 
+                                Todas las se dictan por google meet. En el dia de la clase recibiras un correo con la invitaciones a la meet.
                             </p>
-                        </div>                       
+                        </div>
                     </div>
-                    <div className='acordion__container' onClick={(() => {
-                        setModality(!modality)
-                    })}>
-                        <div className='acordion__items'>
+                    <div className='acordion__container' >
+                        <div className='acordion__items' onClick={(() => {
+                            setModality(!modality)
+                        })}>
                             <li className='acordion__item'>¿Puedo cursar desde cualquier lugar? </li>
                             <MdOutlineKeyboardArrowRight className={`arrow__disable ${modality ? 'arrow__disable--active' : ''}`} />
                         </div>
@@ -65,7 +65,7 @@ function Acordion() {
                             <p>
                                 Si. Puedes cursar desde cualquier parte, mientras cuentes con conexión a internet.
                             </p>
-                        </div>                       
+                        </div>
                     </div>
                 </ul>
             </article>

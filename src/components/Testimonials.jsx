@@ -33,9 +33,7 @@ function Testimonials() {
                 <div className="arrow__right"  onClick={() => { setActive(true) }} >
                     <AiOutlineArrowRight/>
                 </div>
-            </div>
-            {/* 2 */}
-            {/* SECCION 2 */}
+            </div>           
             <div className={`${active ? 'active' : 'disable'}`}>
                 <div className='arrow__left' onClick={() => { setActive(false) }}>
                     <AiOutlineArrowLeft ></AiOutlineArrowLeft>
@@ -55,7 +53,7 @@ function Testimonials() {
                             quotation marks
                             “ If you want to lay the best foundation possible Id recommend taking this course. The depth the instructors go into is incredible. I now feel so confident about starting up as a professional developer. ”
                         </p>
-                        <h5 className='testimonials__name'>Dua - UX Designer</h5>
+                        <h5 className='testimonials__name'>Bran - Frontend</h5>
                     </article>
                 </section>
                 <img className='testimonials__image' src={face} alt="face" />
