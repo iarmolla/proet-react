@@ -2,6 +2,7 @@ import React, { useState } from 'react'
 import '../styles/testimonials.css'
 import { AiOutlineArrowLeft, AiOutlineArrowRight } from 'react-icons/ai';
 import face from '../assets/face.jpg'
+import woman from '../assets/woman.jpg'
 
 function Testimonials() {
     const [active, setActive] = useState(false)
@@ -29,7 +30,7 @@ function Testimonials() {
                         <h5 className='testimonials__name'>Dua - UX Designer</h5>
                     </article>
                 </section>
-                <img className='testimonials__image' src="https://static.litmind.com/uu4PAYxXJYtXPp4FthCkej0JQmUBGpHU.PhotoSingleImage.2848292.big.jpg" alt="" />
+                <img className='testimonials__image' src={woman} alt="testimonial" />
                 <div className="arrow__right"  onClick={() => { setActive(true) }} >
                     <AiOutlineArrowRight/>
                 </div>
@@ -56,7 +57,7 @@ function Testimonials() {
                         <h5 className='testimonials__name'>Bran - Frontend</h5>
                     </article>
                 </section>
-                <img className='testimonials__image' src={face} alt="face" />
+                <img className='testimonials__image' src={face} alt="testimonial" />
                 <div className="arrow__right" onClick={() => { setActive(false) }}>
                     <AiOutlineArrowRight  />
                 </div>

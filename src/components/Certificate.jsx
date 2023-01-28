@@ -13,7 +13,7 @@ function Certificate() {
                 </p>
             </article>
             <article>
-                <img src={certificate} className="certificate__image" alt="" />
+                <img src={certificate} className="certificate__image" alt="certificate" />
             </article>
         </section>
     )

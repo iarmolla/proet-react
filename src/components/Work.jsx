@@ -8,7 +8,6 @@ import uala from '../assets/uala.png'
 import banco from '../assets/banco.svg'
 import provincia from '../assets/provincia.svg'
 
-
 function Work() {
     return (
         <div>
@@ -54,8 +53,7 @@ function Work() {
                         </div>                                                            
                         <div className='slide'>
                             <img src={accenture} alt="accenture" className='image__company' />
-                        </div>     
-                                      
+                        </div>                                           
                     </div>
                 </div>
             </div>

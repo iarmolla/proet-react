@@ -70,7 +70,7 @@ function Acordion() {
                 </ul>
             </article>
             <article>
-                <img src={search} className="accordion__image" alt="" />
+                <img src={search} className="accordion__image" alt="search" />
             </article>
         </section>
     )
